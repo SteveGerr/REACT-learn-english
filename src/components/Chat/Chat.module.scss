@@ -14,24 +14,31 @@
         margin: 10px 0 10px 10px;
         color: aliceblue;
         border-right: 2px solid #4969d4;
-        position: absolute;
-        top: 0;
-        bottom: 0;
+        // position: absolute;
+        // top: 0;
+        // bottom: 0;
     }
     &__dialogs {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
         width: 70%;
         margin: 10px 10px 10px 0;
         color: aliceblue;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 30%;
     }
     &__colHeading {
         margin-bottom: 20px;
         font-size: 20px;
+    }
+    .dialogs_left,
+    .dialogs_right {
+        display: flex;
+        margin: 20px;
+    }
+    .dialogs_left {
+        justify-content: flex-start;
+    }
+    .dialogs_right {
+        justify-content: flex-end;
     }
 }
