@@ -1,0 +1,13 @@
+
+.chatlist {
+    .list {
+        list-style-type: none;
+    }
+    .item {        
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+            background-color: #21345a;
+        }
+    }
+}
