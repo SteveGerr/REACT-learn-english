@@ -1,4 +1,5 @@
 import ChatDialogItem from '../ChatDialogItem/ChatDialogItem'
+import ChatInput from '../ChatInput/ChatInput'
 import ChatList from '../ChatList/ChatList'
 import chatStyles from './Chat.module.scss'
 
@@ -29,6 +30,7 @@ const Chat = () => {
                     </div>
                 </div>
                 
+            <ChatInput />
             </div>
         </div>
     )

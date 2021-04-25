@@ -23,12 +23,17 @@
         flex-direction: column;
         justify-content: flex-start;
         width: 70%;
+        height: 100%;
         margin: 10px 10px 10px 0;
         color: aliceblue;
     }
     &__colHeading {
         margin-bottom: 20px;
         font-size: 20px;
+    }
+    .dialogs_wrapper {
+        height: 100%;
+        overflow: auto;
     }
     .dialogs_left,
     .dialogs_right {
