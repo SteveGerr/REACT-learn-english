@@ -1,7 +1,10 @@
-import ChatDialogItem from '../ChatDialogItem/ChatDialogItem'
+
+// import { Route } from 'react-router'
+import ChatBase from '../ChatBase/ChatBase'
 import ChatInput from '../ChatInput/ChatInput'
 import ChatList from '../ChatList/ChatList'
 import chatStyles from './Chat.module.scss'
+// import {Route} from './react'
 
 const Chat = () => {
 
@@ -16,18 +19,8 @@ const Chat = () => {
             <div className={chatStyles.chat__dialogs}>
                 <p className={chatStyles.chat__colHeading} >Dialogs</p>
                 <div className={chatStyles.dialogs_wrapper}>
-                    {/* LEft dialogs */}
-                    <div className={chatStyles.dialogs_left}>
-                        <ChatDialogItem />
-                    </div>
-                    <div className={chatStyles.dialogs_left}>
-                        <ChatDialogItem />
-                    </div>
-
-                    {/* Right dialogs */}
-                    <div className={chatStyles.dialogs_right}>
-                        <ChatDialogItem />
-                    </div>
+                    {/* <Route component={ChatBase}/> */}
+                    <ChatBase />
                 </div>
                 
             <ChatInput />
