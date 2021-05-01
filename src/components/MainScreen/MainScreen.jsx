@@ -20,7 +20,7 @@ const MainScreen = () => {
                         <ChatList />
                     </div>
                     <div className={msStyles.MainScreen__showContent}>
-                        <Route path="/" component={WelcomeScreen} />
+                        <Route path="/welcome" component={WelcomeScreen} />
                         <Route path="/chats" component={Chat}/>
                     </div>
                     

@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    Link
+    NavLink
   } from "react-router-dom";
 // import Chat from '../Chat/Chat';
 // import WelcomeScreen from '../WelcomeScreen/WelcomeScreen';
@@ -9,15 +9,15 @@ import clStyle from './ChatList.module.scss'
 const ChatList = () => {
     
     return (
-        <div>
-            <p className={clStyle.chat__colHeading} >Choose the chat:</p>
-            <ul className={clStyle.chatlist}>
+        <div className={clStyle.chatlist}>
+            <p className={clStyle.colHeading} >Choose the chat:</p>
+            <ul>
                 <ul className={clStyle.list}>
-                    <li className={clStyle.item}>
-                        <Link to="/">Home</Link>
+                    <li>
+                        <NavLink className={clStyle.item} to="/welcome" activeClassName={clStyle.activeLink}>Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/chats">Chats</Link>
+                        <NavLink className={clStyle.item} to="/chats" activeClassName={clStyle.activeLink}>Chats</NavLink>
                     </li>
                 </ul>
             </ul>

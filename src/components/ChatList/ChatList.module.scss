@@ -1,13 +1,29 @@
 
 .chatlist {
+    .colHeading {
+        font-weight: 600;
+        color: aliceblue;
+    }
     .list {
         list-style-type: none;
     }
-    .item {        
-        text-decoration: underline;
+    .item {
+        font-weight: 600;        
+        text-decoration: none;
+        color: cornflowerblue;
         cursor: pointer;
+        &:visited {
+            color: cornflowerblue;
+        }
+        &.activeLink {
+            color: rgb(114, 144, 199);
+            text-decoration: underline;
+        }
+    }
+    li {
         &:hover {
             background-color: #21345a;
         }
+
     }
 }

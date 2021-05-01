@@ -1,6 +1,5 @@
 
 // import { Route } from 'react-router'
-import { Link } from 'react-router-dom'
 import ChatBase from '../ChatBase/ChatBase'
 import ChatInput from '../ChatInput/ChatInput'
 import chatStyles from './Chat.module.scss'
@@ -21,7 +20,6 @@ const Chat = () => {
                 
             <ChatInput />
             </div>
-            <Link to="/welcome">Welcome</Link>
         </div>
     )
 }
