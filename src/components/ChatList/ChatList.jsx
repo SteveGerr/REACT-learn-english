@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
     Link
   } from "react-router-dom";
 // import Chat from '../Chat/Chat';
@@ -10,8 +9,7 @@ import clStyle from './ChatList.module.scss'
 const ChatList = () => {
     
     return (
-        <Router>
-
+        <div>
             <p className={clStyle.chat__colHeading} >Choose the chat:</p>
             <ul className={clStyle.chatlist}>
                 <ul className={clStyle.list}>
@@ -19,12 +17,11 @@ const ChatList = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/chats">Basic</Link>
+                        <Link to="/chats">Chats</Link>
                     </li>
                 </ul>
             </ul>
-
-        </Router>
+        </div>
 
     );
 }
