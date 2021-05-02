@@ -1,7 +1,7 @@
 
 // import { Route } from 'react-router'
-import ChatBase from '../ChatBase/ChatBase'
-import ChatInput from '../ChatInput/ChatInput'
+import ChatBase from './ChatBase/ChatBase'
+import ChatInput from './ChatInput/ChatInput'
 import chatStyles from './Chat.module.scss'
 // import {Route} from './react'
 

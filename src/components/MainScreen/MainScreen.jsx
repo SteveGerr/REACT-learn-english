@@ -1,7 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom'
-import ChatList from '../ChatList/ChatList'
-import Chat from '../Chat/Chat'
-import WelcomeScreen from '../WelcomeScreen/WelcomeScreen'
+import ChatList from './ChatList/ChatList'
+import Chat from './Chat/Chat'
+import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
 import msStyles from './MainScreen.module.scss'
 
 const MainScreen = () => {
@@ -20,7 +20,7 @@ const MainScreen = () => {
                         <ChatList />
                     </div>
                     <div className={msStyles.MainScreen__showContent}>
-                        <Route path="/welcome" component={WelcomeScreen} />
+                        <Route exact path="/welcome" component={WelcomeScreen} />
                         <Route path="/chats" component={Chat}/>
                     </div>
                     

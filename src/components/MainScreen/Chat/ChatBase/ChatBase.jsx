@@ -1,4 +1,4 @@
-import ChatDialogItem from '../ChatDialogItem/ChatDialogItem'
+import ChatDialogItem from './ChatDialogItem/ChatDialogItem'
 
 
 

@@ -1,5 +1,5 @@
 // import { Chip } from '@material-ui/core'
-import ChipsArray from '../ChatChip/ChatChip'
+import ChipsArray from './ChatChip/ChatChip'
 import ciStyle from './ChatInput.module.scss'
 
 const ChatInput = () => {
