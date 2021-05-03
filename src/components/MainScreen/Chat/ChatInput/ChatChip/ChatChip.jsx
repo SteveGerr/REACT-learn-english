@@ -20,11 +20,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ChipsArray(props) {
+  const { chips } = props.state.dialogs;
+  console.log(chips);
   const classes = useStyles();
 
   return (
     <Paper component="ul" className={classes.root}>
-      {props.chips.map((data) => {
+      {chips.map((data) => {
         let icon;
 
         if (data.label === 'React') {

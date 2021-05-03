@@ -5,6 +5,7 @@ import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
 import msStyles from './MainScreen.module.scss'
 
 const MainScreen = (props) => {
+    // console.log(props);
     // let show = false
     return (
         <BrowserRouter>
