@@ -23,7 +23,10 @@ const MainScreen = (props) => {
                     <div className={msStyles.MainScreen__showContent}>
                         <Route path="/welcome" component={WelcomeScreen} />
                         {/* <Route path="/chats" component={Chat}/> */}
-                        <Route path="/chats" render={() => <Chat state={props.state} />}/>
+                        <Route path="/chats" render={() => 
+                            <Chat state={props.state} 
+                                  addAnswer={props.addAnswer}
+                            />}/>
 
                     </div>
                     

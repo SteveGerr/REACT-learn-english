@@ -10,9 +10,15 @@ const state = {
             { key: 5, label: 'the' },
             { key: 6, label: 'to' },
             { key: 7, label: 'Ivan' },          
-        ]
-    }
-
+        ],
+    },
+    answers: Array<string>(),
+    question: Array<string>()
+    
+    
 }
 
+export let addAnswer = (messageTxt: string) => {
+    state.answers.push(messageTxt)
+}
 export default state;

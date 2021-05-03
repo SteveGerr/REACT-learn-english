@@ -21,8 +21,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ChipsArray(props) {
   const { chips } = props.state.dialogs;
-  console.log(chips);
   const classes = useStyles();
+
+  // Send message
+  const onSendMsg = (value) => {
+    console.log(value);
+  }
 
   return (
     <Paper component="ul" className={classes.root}>
@@ -36,6 +40,7 @@ export default function ChipsArray(props) {
         return (
           <li key={data.key}>
             <Chip
+              onClick={onSendMsg}
               icon={icon}
               label={data.label}
               className={classes.chip}

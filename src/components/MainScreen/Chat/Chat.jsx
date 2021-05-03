@@ -17,7 +17,7 @@ const Chat = (props) => {
                     <ChatBase />
                 </div>
                 
-            <ChatInput state={props.state} />
+            <ChatInput state={props.state} addAnswer={props.addAnswer} />
             </div>
         </div>
     )
