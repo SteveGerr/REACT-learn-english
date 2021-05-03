@@ -23,9 +23,10 @@ export default function ChipsArray(props) {
   const { chips } = props.state.dialogs;
   const classes = useStyles();
 
-  // Send message
-  const onSendMsg = (value) => {
+  // Add word
+  const compAddWord = (value) => {
     console.log(value);
+    props.storeAddWord(value)
   }
 
   return (
@@ -40,7 +41,7 @@ export default function ChipsArray(props) {
         return (
           <li key={data.key}>
             <Chip
-              onClick={onSendMsg}
+              onClick={compAddWord}
               icon={icon}
               label={data.label}
               className={classes.chip}
