@@ -5,7 +5,7 @@ import ChatInput from './ChatInput/ChatInput'
 import chatStyles from './Chat.module.scss'
 // import {Route} from './react'
 
-const Chat = () => {
+const Chat = (props) => {
 
     return (
         <div className={chatStyles.chat}>
@@ -18,7 +18,7 @@ const Chat = () => {
                     <ChatBase />
                 </div>
                 
-            <ChatInput />
+            <ChatInput state={props.state.chips} />
             </div>
         </div>
     )

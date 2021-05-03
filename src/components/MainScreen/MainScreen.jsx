@@ -4,7 +4,7 @@ import Chat from './Chat/Chat'
 import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
 import msStyles from './MainScreen.module.scss'
 
-const MainScreen = () => {
+const MainScreen = (props) => {
     // let show = false
     return (
         <BrowserRouter>
@@ -20,8 +20,10 @@ const MainScreen = () => {
                         <ChatList />
                     </div>
                     <div className={msStyles.MainScreen__showContent}>
-                        <Route exact path="/welcome" component={WelcomeScreen} />
-                        <Route path="/chats" component={Chat}/>
+                        <Route path="/welcome" component={WelcomeScreen} />
+                        {/* <Route path="/chats" component={Chat}/> */}
+                        <Route path="/chats" render={() => <Chat state={props.state} />}/>
+
                     </div>
                     
                 </section>

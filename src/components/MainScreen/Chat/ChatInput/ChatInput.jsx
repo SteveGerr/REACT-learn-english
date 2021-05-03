@@ -2,14 +2,14 @@
 import ChipsArray from './ChatChip/ChatChip'
 import ciStyle from './ChatInput.module.scss'
 
-const ChatInput = () => {
+const ChatInput = (props) => {
 
     return (
         <div className={ciStyle.wrapper}>
             <label htmlFor="enterText"></label>
             <input id='enterText' type="text"/>
             <div className={ciStyle.select}>
-                <ChipsArray />
+                <ChipsArray state={props} />
             </div>
         </div>
     )
