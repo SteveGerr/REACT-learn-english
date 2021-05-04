@@ -3,11 +3,12 @@ import React from 'react'
 import ChipsArray from './ChatChip/ChatChip'
 import ciStyle from './ChatInput.module.scss'
 
+
 const ChatInput = (props) => {
 
     // Find input
     let inputAnswer = React.createRef();
-     
+
 
     let addAnswer = () => {
         let value = inputAnswer.current.value
@@ -30,11 +31,14 @@ const ChatInput = (props) => {
                 </div>
             </div>
             <div className={ciStyle.select}>
-                <ChipsArray state={props.state} />
+                <ChipsArray
+                    state={props.state}
+                    addWord={props.addWord} />
             </div>
         </div>
     )
 
 }
+
 
 export default ChatInput

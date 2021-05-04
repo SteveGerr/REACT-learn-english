@@ -10,7 +10,7 @@ const MainScreen = (props) => {
     return (
         <BrowserRouter>
             <div className={msStyles.MainScreen__wrapper}>
-            
+
                 <header className={msStyles.MainScreen__header}>
                     <p className={msStyles.MainScreen__logo}>lengapp</p>
                 </header>
@@ -23,13 +23,14 @@ const MainScreen = (props) => {
                     <div className={msStyles.MainScreen__showContent}>
                         <Route path="/welcome" component={WelcomeScreen} />
                         {/* <Route path="/chats" component={Chat}/> */}
-                        <Route path="/chats" render={() => 
-                            <Chat state={props.state} 
+                        <Route path="/chats" render={() =>
+                            <Chat state={props.state}
                                   addAnswer={props.addAnswer}
+                                  addWord={props.addWord}
                             />}/>
 
                     </div>
-                    
+
                 </section>
                 <footer className={msStyles.MainScreen__footer} >
                     <p>development by Ivan Shunyaev</p>

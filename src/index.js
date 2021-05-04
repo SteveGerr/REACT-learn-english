@@ -5,12 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import state from './store/state';
-import { addAnswer } from './store/state'
+import { addAnswer, storeAddWord } from './store/state'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} addAnswer={addAnswer} />
+    <App state={state} addAnswer={addAnswer} addWord={storeAddWord} />
   </React.StrictMode>,
   document.getElementById('root')
 );

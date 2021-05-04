@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
@@ -21,12 +21,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ChipsArray(props) {
   const { chips } = props.state.dialogs;
+  let addWord = props.addWord;
   const classes = useStyles();
 
   // Add word
   const compAddWord = (value) => {
-    console.log(value);
-    props.storeAddWord(value)
+    let word = String(value.target.innerText)
+    addWord(word)
   }
 
   return (

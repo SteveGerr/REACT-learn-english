@@ -16,8 +16,11 @@ const Chat = (props) => {
                     {/* <Route component={ChatBase}/> */}
                     <ChatBase />
                 </div>
-                
-            <ChatInput state={props.state} addAnswer={props.addAnswer} />
+
+            <ChatInput
+                state={props.state}
+                addAnswer={props.addAnswer}
+                addWord={props.addWord} />
             </div>
         </div>
     )
