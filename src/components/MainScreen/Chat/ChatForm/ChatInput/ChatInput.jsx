@@ -4,7 +4,6 @@ import ciStyle from './ChatInput.module.scss'
 const ChatInput = (props) => {
 
     let fEnterTxt = (val) => {
-        console.log(props.enterTxt);
         props.enterTxt(val.target.value)
     }
     return (

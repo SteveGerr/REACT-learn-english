@@ -20,10 +20,12 @@ const state = {
   stateValue: "",
 };
 
-export let sendAnswer = (messageTxt: string) => {
-  state.answers.push(messageTxt);
+export let sendAnswer = () => {
+  if (state.stateValue.length === 0) return;
+  state.answers.push(state.stateValue);
   // Start rerender
   rerenderState(state);
+  state.stateValue = "";
 };
 
 export let storeAddWord = (word: string) => {

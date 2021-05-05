@@ -8,17 +8,10 @@ import ChatInput from './ChatInput/ChatInput'
 const ChatForm = (props) => {
 
 
-    // let sendAnswer = () => {
-    //     let value = inputAnswer.current.value
-    //     if (value === '') return
-    //     props.sendAnswer(value)
-    //     // showWord()
-    //     value = ' '
-    // }
-    // let showWord = () => {
-    //     inputAnswer.current.value = props.state.arrWord.join(" ")
-    //     console.log(inputAnswer.current.value);
-    // }
+    let sendAnswer = () => {
+        props.sendAnswer()
+    }
+
 
     return (
         <div className={cfStyle.wrapper}>
@@ -30,7 +23,7 @@ const ChatForm = (props) => {
                 />
                 {/* Send button */}
                 <div className={cfStyle.sendBtnWrapper}>
-                    <button onClick={() => {console.log("Plug");}} className={cfStyle.sendBtn}>Send</button>
+                    <button onClick={sendAnswer} className={cfStyle.sendBtn}>Send</button>
                 </div>
             </div>
             <div className={cfStyle.select}>

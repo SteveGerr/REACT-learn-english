@@ -32,19 +32,19 @@ export default function ChipsArray(props) {
 
   return (
     <Paper component="ul" className={classes.root}>
-      {chips.map((data) => {
+      {chips.map((chip) => {
         let icon;
 
-        if (data.label === 'React') {
+        if (chip.label === 'React') {
           icon = <TagFacesIcon />;
         }
 
         return (
-          <li key={data.key}>
+          <li key={chip.key}>
             <Chip
               onClick={compAddWord}
               icon={icon}
-              label={data.label}
+              label={chip.label}
               className={classes.chip}
             />
           </li>
