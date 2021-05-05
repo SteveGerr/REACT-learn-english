@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Route, BrowserRouter } from 'react-router-dom'
 import ChatList from './ChatList/ChatList'
 import Chat from './Chat/Chat'
 import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
@@ -25,17 +25,15 @@ const MainScreen = (props) => {
                         {/* <Route path="/chats" component={Chat}/> */}
                         <Route path="/chats" render={() =>
                             <Chat state={props.state}
-                                  addAnswer={props.addAnswer}
-                                  addWord={props.addWord}
-                            />}/>
-
+                                sendAnswer={props.sendAnswer}
+                                addWord={props.addWord}
+                            />}
+                        />
                     </div>
-
                 </section>
                 <footer className={msStyles.MainScreen__footer} >
                     <p>development by Ivan Shunyaev</p>
                 </footer>
-
             </div>
         </BrowserRouter>
     )

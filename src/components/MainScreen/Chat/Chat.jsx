@@ -1,7 +1,7 @@
 
 // import { Route } from 'react-router'
 import ChatBase from './ChatBase/ChatBase'
-import ChatInput from './ChatInput/ChatInput'
+import ChatForm from './ChatForm/ChatForm'
 import chatStyles from './Chat.module.scss'
 // import {Route} from './react'
 
@@ -17,9 +17,9 @@ const Chat = (props) => {
                     <ChatBase />
                 </div>
 
-            <ChatInput
+            <ChatForm
                 state={props.state}
-                addAnswer={props.addAnswer}
+                sendAnswer={props.sendAnswer}
                 addWord={props.addWord} />
             </div>
         </div>

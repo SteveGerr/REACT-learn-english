@@ -1,3 +1,5 @@
+import { rerenderState } from "../rerenderState";
+
 const state = {
   dialogs: {
     chips: [
@@ -17,11 +19,15 @@ const state = {
   sentence: "",
 };
 
-export let addAnswer = (messageTxt: string) => {
+export let sendAnswer = (messageTxt: string) => {
   state.answers.push(messageTxt);
+  // Start rerender
+  rerenderState(state);
 };
 
 export let storeAddWord = (word: string) => {
   state.arrWord.push(word);
+  // Start rerender
+  rerenderState(state);
 };
 export default state;

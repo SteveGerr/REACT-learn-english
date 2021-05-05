@@ -1,15 +1,14 @@
 
 import './App.css';
-import React from "react";
 import MainScreen from './components/MainScreen/MainScreen';
 
 
-function App(props) {
+let App = (props) => {
   return (
     <div className="App">
       <MainScreen
         state={props.state}
-        addAnswer={props.addAnswer}
+        sendAnswer={props.sendAnswer}
         addWord={props.addWord} />
     </div>
   );

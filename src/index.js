@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { rerenderState } from './rerenderState'
 import state from './store/state';
-import { addAnswer, storeAddWord } from './store/state'
+// import { sendAnswer, storeAddWord } from './store/state'
 
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App state={state} addAnswer={addAnswer} addWord={storeAddWord} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+rerenderState(state)
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App state={state} sendAnswer={sendAnswer} addWord={storeAddWord} />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 
 reportWebVitals();
