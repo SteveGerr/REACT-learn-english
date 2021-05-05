@@ -5,7 +5,7 @@ import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
 import msStyles from './MainScreen.module.scss'
 
 const MainScreen = (props) => {
-    // console.log(props);
+
     // let show = false
     return (
         <BrowserRouter>
@@ -26,7 +26,8 @@ const MainScreen = (props) => {
                         <Route path="/chats" render={() =>
                             <Chat state={props.state}
                                 sendAnswer={props.sendAnswer}
-                                addWord={props.addWord}
+                                storeAddWord={props.storeAddWord}
+                                enterTxt={props.enterTxt}
                             />}
                         />
                     </div>

@@ -17,6 +17,7 @@ const state = {
   question: Array<string>(),
   arrWord: Array<string>(),
   sentence: "",
+  stateValue: "",
 };
 
 export let sendAnswer = (messageTxt: string) => {
@@ -30,4 +31,10 @@ export let storeAddWord = (word: string) => {
   // Start rerender
   rerenderState(state);
 };
+
+export let enterTxt = (txt: string) => {
+  state.stateValue = txt;
+  rerenderState(state);
+};
+
 export default state;

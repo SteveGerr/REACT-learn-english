@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ChipsArray(props) {
   const { chips } = props.state.dialogs;
-  let addWord = props.addWord;
+  let addWord = props.storeAddWord;
   const classes = useStyles();
 
   // Add word

@@ -24,7 +24,10 @@ const ChatForm = (props) => {
         <div className={cfStyle.wrapper}>
             <div className={cfStyle.inputBlock}>
                 {/* Input */}
-                <ChatInput  />
+                <ChatInput
+                    value={props.state.stateValue}
+                    enterTxt={props.enterTxt}
+                />
                 {/* Send button */}
                 <div className={cfStyle.sendBtnWrapper}>
                     <button onClick={() => {console.log("Plug");}} className={cfStyle.sendBtn}>Send</button>
@@ -33,7 +36,9 @@ const ChatForm = (props) => {
             <div className={cfStyle.select}>
                 <ChipsArray
                     state={props.state}
-                    addWord={props.addWord} />
+                    storeAddWord={props.storeAddWord}
+                    enterTxt={props.enterTxt}
+                />
             </div>
         </div>
     )

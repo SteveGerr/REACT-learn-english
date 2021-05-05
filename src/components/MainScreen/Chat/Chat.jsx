@@ -20,7 +20,9 @@ const Chat = (props) => {
             <ChatForm
                 state={props.state}
                 sendAnswer={props.sendAnswer}
-                addWord={props.addWord} />
+                storeAddWord={props.storeAddWord}
+                enterTxt={props.enterTxt}
+            />
             </div>
         </div>
     )
