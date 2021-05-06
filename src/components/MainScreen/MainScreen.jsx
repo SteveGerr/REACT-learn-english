@@ -15,7 +15,7 @@ const MainScreen = (props) => {
      *
      *
      */
-    const { state, Store, storeAddWord } = props
+    const { state, Store } = props
 
     return (
         <BrowserRouter>
@@ -34,7 +34,7 @@ const MainScreen = (props) => {
                         <Route path="/welcome" component={WelcomeScreen} />
                         {/* <Route path="/chats" component={Chat}/> */}
                         <Route path="/chats" render={() =>
-                            <Chat state={state} Store={Store} storeAddWord={storeAddWord}/>}
+                            <Chat state={state} Store={Store} storeAddWord={Store.storeAddWord.bind(Store)}/>}
                         />
                     </div>
                 </section>

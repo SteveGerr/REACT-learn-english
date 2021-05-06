@@ -29,7 +29,7 @@ const ChatForm = (props) => {
             <div className={cfStyle.select}>
                 <ChatChips
                     dialogs={Store.state.dialogs}
-                    storeAddWord={Store.storeAddWord}
+                    storeAddWord={Store.storeAddWord.bind(Store)}
                 />
             </div>
         </div>
