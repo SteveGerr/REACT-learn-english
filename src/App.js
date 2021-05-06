@@ -4,14 +4,13 @@ import MainScreen from './components/MainScreen/MainScreen';
 
 
 let App = (props) => {
-
+  const { Store } = props
   return (
     <div className="App">
       <MainScreen
-        state={props.state}
-        sendAnswer={props.sendAnswer}
-        storeAddWord={props.storeAddWord}
-        enterTxt={props.enterTxt}
+        state={Store.state}
+        Store={Store}
+        storeAddWord={Store.storeAddWord}
      />
     </div>
   );

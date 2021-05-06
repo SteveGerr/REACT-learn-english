@@ -1,12 +1,12 @@
 import React from 'react'
 // import { Chip } from '@material-ui/core'
-import ChipsArray from './ChatChip/ChatChip'
+import ChatChips from './ChatChip/ChatChip'
 import cfStyle from './ChatForm.module.scss'
 import ChatInput from './ChatInput/ChatInput'
 
 
 const ChatForm = (props) => {
-
+    const { Store } = props
 
     let sendAnswer = () => {
         props.sendAnswer()
@@ -18,8 +18,8 @@ const ChatForm = (props) => {
             <div className={cfStyle.inputBlock}>
                 {/* Input */}
                 <ChatInput
-                    value={props.state.stateValue}
-                    enterTxt={props.enterTxt}
+                    value={Store.state.stateValue}
+                    enterTxt={Store.enterTxt}
                 />
                 {/* Send button */}
                 <div className={cfStyle.sendBtnWrapper}>
@@ -27,10 +27,9 @@ const ChatForm = (props) => {
                 </div>
             </div>
             <div className={cfStyle.select}>
-                <ChipsArray
-                    state={props.state}
-                    storeAddWord={props.storeAddWord}
-                    enterTxt={props.enterTxt}
+                <ChatChips
+                    dialogs={Store.state.dialogs}
+                    storeAddWord={Store.storeAddWord}
                 />
             </div>
         </div>

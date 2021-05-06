@@ -1,10 +1,10 @@
 
 import ciStyle from './ChatInput.module.scss'
 
-const ChatInput = (props) => {
+const ChatInput = (store) => {
 
     let fEnterTxt = (val) => {
-        props.enterTxt(val.target.value)
+        // store.enterTxt(val.target.value)
     }
     return (
         <div className={ciStyle.inputWrapper}>
@@ -12,7 +12,7 @@ const ChatInput = (props) => {
             <input
                 id='enterText'
                 type="text"
-                value={props.value}
+                value={store.value}
                 onChange={fEnterTxt}
             />
         </div>

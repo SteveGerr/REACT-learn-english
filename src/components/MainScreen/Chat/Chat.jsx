@@ -6,6 +6,16 @@ import chatStyles from './Chat.module.scss'
 // import {Route} from './react'
 
 const Chat = (props) => {
+    /**
+     * It has:
+     * props = {
+     *  Store,
+     *  state,
+     *  storeAddWord
+     * }
+     *
+     */
+    // const { state } = props
     return (
         <div className={chatStyles.chat}>
 
@@ -17,12 +27,7 @@ const Chat = (props) => {
                     <ChatBase />
                 </div>
 
-            <ChatForm
-                state={props.state}
-                sendAnswer={props.sendAnswer}
-                storeAddWord={props.storeAddWord}
-                enterTxt={props.enterTxt}
-            />
+            <ChatForm Store={props.Store} />
             </div>
         </div>
     )

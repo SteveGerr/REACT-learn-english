@@ -5,8 +5,18 @@ import WelcomeScreen from './WelcomeScreen/WelcomeScreen'
 import msStyles from './MainScreen.module.scss'
 
 const MainScreen = (props) => {
+    /**
+     * It has:
+     * props = {
+     *  Store,
+     *  state,
+     *  storeAddWord
+     * }
+     *
+     *
+     */
+    const { state, Store, storeAddWord } = props
 
-    // let show = false
     return (
         <BrowserRouter>
             <div className={msStyles.MainScreen__wrapper}>
@@ -24,11 +34,7 @@ const MainScreen = (props) => {
                         <Route path="/welcome" component={WelcomeScreen} />
                         {/* <Route path="/chats" component={Chat}/> */}
                         <Route path="/chats" render={() =>
-                            <Chat state={props.state}
-                                sendAnswer={props.sendAnswer}
-                                storeAddWord={props.storeAddWord}
-                                enterTxt={props.enterTxt}
-                            />}
+                            <Chat state={state} Store={Store} storeAddWord={storeAddWord}/>}
                         />
                     </div>
                 </section>
