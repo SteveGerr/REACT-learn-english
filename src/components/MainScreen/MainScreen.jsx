@@ -34,7 +34,7 @@ const MainScreen = (props) => {
                         <Route path="/welcome" component={WelcomeScreen} />
                         {/* <Route path="/chats" component={Chat}/> */}
                         <Route path="/chats" render={() =>
-                            <Chat state={state} Store={Store} storeAddWord={Store.storeAddWord.bind(Store)}/>}
+                            <Chat state={state} Store={Store} storeAddWord={Store}/>}
                         />
                     </div>
                 </section>

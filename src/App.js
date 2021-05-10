@@ -5,10 +5,11 @@ import MainScreen from './components/MainScreen/MainScreen';
 
 let App = (props) => {
   const { Store } = props
+  console.log(Store);
   return (
     <div className="App">
       <MainScreen
-        state={Store.state}
+        state={Store.getState()}
         Store={Store}
         storeAddWord={Store.storeAddWord}
      />

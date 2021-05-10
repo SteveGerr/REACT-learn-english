@@ -7,6 +7,7 @@ import ChatInput from './ChatInput/ChatInput'
 
 const ChatForm = (props) => {
     const { Store } = props
+    // console.log(Store.getState())
 
     let sendAnswer = () => {
         props.sendAnswer()
@@ -18,7 +19,7 @@ const ChatForm = (props) => {
             <div className={cfStyle.inputBlock}>
                 {/* Input */}
                 <ChatInput
-                    value={Store.state.stateValue}
+                    value={Store.getState().stateValue}
                     enterTxt={Store.enterTxt}
                 />
                 {/* Send button */}
@@ -28,8 +29,8 @@ const ChatForm = (props) => {
             </div>
             <div className={cfStyle.select}>
                 <ChatChips
-                    dialogs={Store.state.dialogs}
-                    storeAddWord={Store.storeAddWord.bind(Store)}
+                    state={Store.getState().DefaultState}
+                    storeAddWord={Store.dispatch.bind(Store)}
                 />
             </div>
         </div>

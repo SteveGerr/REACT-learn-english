@@ -20,19 +20,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ChatChips(props) {
-  const { dialogs, storeAddWord } = props;
+  console.log("ChatChips", props);
+  const { storeAddWord, state } = props;
   const classes = useStyles();
 
   // Add word
   const compAddWord = (value) => {
     let word = String(value.target.innerText)
-    console.log("word:", word );
     storeAddWord(word)
   }
 
   return (
     <Paper component="ul" className={classes.root}>
-      {dialogs.chips.map((chip) => {
+      {state.chips.map((chip) => {
         let icon;
 
         if (chip.label === 'React') {

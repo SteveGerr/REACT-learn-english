@@ -41,7 +41,7 @@ const Store = {
     this.state.stateValue = txt;
     this.rerenderState(this.state);
   },
-  rerenderListener(observer: any) {
+  subscribe(observer: any) {
     this.rerenderState = observer;
   },
 };
